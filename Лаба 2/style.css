@@ -1,0 +1,34 @@
+.content{
+    margin: 0 auto;
+}
+.SliderImg{
+    display: none;
+    position: absolute;
+    margin: auto;
+    max-width: 800px;
+    height: 600px;
+    left: 20%;
+}
+.slider-content{
+    width: 1000px;
+}
+.svg{
+	max-width: 30px;
+	padding-top: 7px;
+}
+#leftbtn{
+	position: absolute;
+	max-width: 40px;
+	max-height: 50px;
+	z-index: 3;
+	left: 17%;
+	bottom: 45%;
+}
+#rightbtn{
+	position: absolute;
+	max-width: 40px;
+	max-height: 50px;
+	z-index: 3;
+	left: 73%;
+	bottom: 45%;
+}

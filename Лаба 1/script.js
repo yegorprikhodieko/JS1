@@ -24,8 +24,8 @@ typeof(2 != 1)
 
 
 "сыр" + "ы"
-// Предположение:
-// Фактический:
+// Предположение: сыры
+// Фактический:сыры
 
 "сыр" - "ы"
 // Предположение:NaN
@@ -66,18 +66,18 @@ let celsius = 25;
 let fahrenheit = 66.2;
 let fahrenheitLikeCelsius = (celsius * 9/5)+32;
 let celsiusLikeFahrenheit = (fahrenheit-32)*5/9;
-console.log(celsius + " \u{B0}C" + " соответствует " + fahrenheitLikeCelsius + " \u{00B0}F");
+console.log(`${celsius} \u{B0}C соответствует ${fahrenheitLikeCelsius} \u{00B0}F`);
 console.log(fahrenheit + " \u{00B0}F" + " соответствует " + celsiusLikeFahrenheit + " \u{00B0}C");
 
 //Задача 4
 
-let year = prompt("Введите год");
+let year = Number(prompt("Введите год"));
 
-if(Number(year) % 4 !=0)
+if(year % 4 !=0)
 {
     alert("False");
 }
-else if(Number(year)%100 !=0)
+else if(year % 100 != 0)
 {
     alert("True");
 }
@@ -88,11 +88,11 @@ else
 
 //Задача 5
 
-let number1 = prompt("Введите число 1");
+let number1 = Number(prompt("Введите число 1"));
 
-let number2 = prompt("Введите число 2");
+let number2 = Number(prompt("Введите число 2"));
 
-if( Number(number1) == 10 || Number(number2) == 10 || Number(number1)+ Number(number2) == 10)
+if( number1 == 10 || number2 == 10 || number1 + number2 == 10)
 {
     alert("True");
 }
@@ -159,7 +159,7 @@ if(Number1 < Number2 && Number1 < Number3)
         console.log(Number1 + ", " + Number3 + ", " + Number2);
     }
 }
-else if (Number2 < Number3)
+else if (Number2 < Number3 && Number2 < Number1)
 {
     if(Number1 < Number3)
     {
