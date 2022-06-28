@@ -21,7 +21,7 @@ gltfLoader.load(url, (gltf) => {
 });
 let mainWidth=20;
 var geometry = new THREE.BoxGeometry( mainWidth, mainWidth, mainWidth);
-var material = new THREE.MeshBasicMaterial( {  map: loader.load('textureRock.jpg'), } );
+var material = new THREE.MeshBasicMaterial( {  map: loader.load('textureMETAL.jpg'), } );
 var cube = new THREE.Mesh( geometry, material );
 cube.position.y = mainWidth/2
 cube.castShadow = true;
