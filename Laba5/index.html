@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/img/favico.jpg" type="image/x-icon">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Inconsolata&family=Joan&display=swap" rel="stylesheet">
+    <title>MySelfSite</title>
+</head>
+<header class="header">
+    <div class="container headerInner">
+        <a href="/"><p class="tittle">Maket5</p></a>
+        <input type="text" placeholder="Search" class="search">
+        <div class="burger">
+            <span></span>
+        </div>
+        <ul class="menu">
+           <li><button class="menuItem" id="btnCreate">Create</button></li>
+            <li><a href="#" class="menuItem">Sign Up</a></li>
+        </ul>
+    </div>
+</header>
+<body>
+    <div class="container">
+        <div class="cards">
+            <div class="card" id="0123">
+                <div class="cardInner">
+                    <div class="cardHeader">
+                        <div class="cardLogo">
+                            <a href="#">
+                                <img src="img/avatar.jpg" alt="avatar">
+                            </a>
+                        </div>
+                        <p class="txtLogo">Приходько Егор Анатольевич</p>
+                    </div>
+                    <div class="cardBody">
+                        <a href="product/0" alt="photoModel">
+                            <img src="img/mainimg.jpeg" alt="photo">
+                        </a>
+                    </div>
+                    <div class="cardFooter">
+                        <div class="collect">
+                            <img src="img/imgPlus.svg" alt="Plus" class="imgCollect">
+                            <p>Collect Thing</p>
+                        </div>  
+                        <div class="likeShare">
+                            <button class="likes">
+                                <p>Likes</p>
+                                <img src="img/like.svg" alt="Like" class="imgLike">
+                            </button>
+                            <button class="likes">
+                                <p>Share</p>
+                                <img src="img/share.svg" alt="Share" class="imgLike">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>      
+    </div>
+    <div class="modalWindow">
+        <div class="modal">
+            <div class="modalHeader">
+                <p class="txtN">Create card</p>
+            </div>   
+            <div class="modalForm">
+                <form action="/create" method="POST" class="form" enctype='multipart/form-data'>
+                    <div class="modalItem">
+                        <label for="nameItem" class="txtName">Name</label>
+                        <input type="text" placeholder="Boing" class="formItem" name="tittle" required>
+                    </div>
+                    <div class="modalItem">
+                        <label for="typeItem" class="txtName">Type</label>
+                        <input type="text" placeholder="2224-4324-423423" class="formItem" name="type" required>
+                        
+                    </div>
+                    <div class="modalItem">
+                        <label for="priceItem" class="txtName">Price</label>   
+                        <input type="number" placeholder="299" class="formItem" name="price"  required>
+                    </div>
+                    <div class="modalItem">
+                        <label for="dateItem" class="txtName">Date</label>   
+                        <input type="date" class="formItem" name="date">
+                    </div>
+                    <div class="modalItem" id="customForm">
+                        <label for="desItem" class="txtName">Description</label>   
+                        <textarea  id="desItem" placeholder="Description" class="formItem" cols="33" name="description" required></textarea>
+                    </div>
+                    <div class="modalItem" id="customForm">
+                        <label for="tegItem" class="txtName">Tegs</label>   
+                        <textarea  id="tegItem" placeholder="Blender,3DModel,Inventor,Enviroment...." name="tegs" required class="formItem" cols="33"></textarea>
+                    </div>
+                    <div class="modalItem">
+                        <label for="fileItem" class="txtName">Photo</label>   
+                        <input type="file" name="image" id="fileItem" accept=".jpg, .jpeg, .png" required >
+                    </div>
+                    <button type="submit" class="txtName" id="btnSubmit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
